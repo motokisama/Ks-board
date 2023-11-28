@@ -1,0 +1,43 @@
+//create users table
+
+CREATE TABLE "users" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"name"	TEXT NOT NULL,
+	"mail"	INTEGER NOT NULL UNIQUE,
+	"password"	TEXT NOT NULL,
+	"user_id"	TEXT NOT NULL UNIQUE,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+//insert into users
+
+insert into users ("name","mail","password","user_id") values (?,?,?,?);
+
+===================================================================
+
+//create topics table
+
+CREATE TABLE "topics" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"topic_title"	TEXT NOT NULL,
+	"questioner"	TEXT NOT NULL,
+	"questioner_mail"	TEXT NOT NULL,
+	"question_content"	TEXT NOT NULL,
+	"topic_id"	TEXT NOT NULL UNIQUE,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+//insert into topics
+
+insert into topics ("topic_title","questioner","questioner_mail","question_content","topic_id") values (?,?,?,?,?);
+
+===================================================================
+
+CREATE TABLE "" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"response_name"	TEXT NOT NULL,
+	"response_content"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+insert into "" ("response_name","response_content") values (?,?);
