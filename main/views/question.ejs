@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ks掲示板</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= question.topic_title%></h1>
+<h2>>>1 <%= question.question_content%></h2>
+<p>投稿者: <%= question.questioner%></p>
+<table style="border-collapse: collapse;">
+    <% if (responses && responses.length) { %>
+        <% for (let i = 0; i < responses.length; i++) { %>
+            <tr>
+                <% let obj = responses[i]; %>
+                <td><section>
+                    <p>>><%= i + 2 %> 投稿者: <%= obj.response_name%></p>
+                    <h3><%= obj.response_content %></h3>
+                </section></td>
+            </tr>
+        <% } %>
+    <% } %>
+</table>
+<form method="post" action="/question/post/submit">
+    <label>
+        返信：<br>
+        <textarea name="response_content" required></textarea><br>
+    </label>
+    <input type="submit" value="送信">
+    <p id="error"></p>
+</form>
+<form method="get" action='/'>
+    <input type="submit" value="スレッド一覧に戻る">
+</form>
+</body>
+</html>

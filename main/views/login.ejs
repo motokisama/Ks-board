@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ks掲示板</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>ログイン</h1>
+<form method="post" action="/">
+    <label>
+        メールアドレス：<br>
+        <input type="email" name="mail_address" required><br>
+    </label>
+    <label>
+        パスワード：<br>
+        <input type="password" name="pass"><br>
+    </label>
+    <input type="submit" value="ログイン">
+    <p id="error" style="color:red"></p>
+</form>
+<form method="get" action="/create">
+    <label>アカウントがありませんか?</label>
+    <input type="submit" value="アカウントを作成する">
+</form>
+<script>
+    const p = document.getElementById('error');
+    if ('<%= error %>' === 'true') {
+        p.innerHTML = '<%= err_msg %>';
+    }
+</script>
+
+</body>
+</html>

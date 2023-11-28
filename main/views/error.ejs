@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ks掲示板</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>エラー</h1>
+<h1><%= error.status %></h1>
+<h2><%= error.status %></h2>
+<pre><%= error.stack %></pre>
+<form method="get" action='/'>
+    <input type="submit" value="質問一覧に戻る">
+</form>
+</body>
+</html>

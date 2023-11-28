@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ks掲示板</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>返信を送信</h1>
+<form method="post" action="/question/post/submit">
+    <label>
+        返信：<br>
+        <textarea name="response_content"></textarea><br>
+    </label>
+    <input type="submit" value="送信">
+    <p id="error"></p>
+</form>
+<form method="get" action='/'>
+    <input type="submit" value="スレッド一覧に戻る">
+</form>
+</body>
+</html>

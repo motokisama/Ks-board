@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ks掲示板</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>スレッドを作成</h1>
+<form method="post" action="/post/submit">
+    <label>
+        タイトル：<br>
+        <input type="text" name="question_title" required><br>
+    </label>
+    <label>
+        スレッド内容：<br>
+        <textarea name="question_content"></textarea><br>
+    </label>
+    <input type="submit" value="送信">
+    <p id="error"></p>
+</form>
+<form method="get" action='/'>
+    <input type="submit" value="スレッド一覧に戻る">
+</form>
+</body>
+</html>
